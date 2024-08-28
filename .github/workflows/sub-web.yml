@@ -22,7 +22,7 @@ jobs:
     - name: Update sub-web
       run: |
         rm -rf sub-web
-        git clone https://github.com/phpll/sub-web.git
+        git clone https://github.com/phpll/sub-web_vercel.git
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -47,8 +47,8 @@ jobs:
       uses: EndBug/add-and-commit@v6
       with:
         author_name: GitHub Action
-        author_email: noreply@github.com
-        message: "Update sub-web from phpll/sub-web"
+        author_email: phpll@github.com
+        message: "Update sub-web from phpll/sub-web_vercel"
         add: "-A"
       env:
         token: ${{ secrets.REPO_TOKEN }}
